@@ -1,0 +1,26 @@
+{
+  "name": "stdigital",
+  "version": "1.0.0",
+  "description": "Digital Photo Frame",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Python-Student/StDigital.git"
+  },
+  "keywords": [
+    "Google",
+    "Drive",
+    "Photos",
+    "Facebook",
+    "Messenger"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Python-Student/StDigital/issues"
+  },
+  "homepage": "https://github.com/Python-Student/StDigital#readme"
+}
