@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">                 
-	<modelVersion>4.0.0</modelVersion>
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
 
-  	<groupId>st.digital.app</groupId>
+  	<groupId>com.github.myapps</groupId>
   	<artifactId>stdigital</artifactId>
   	<version>1</version>
   	<packaging>pom</packaging>
@@ -17,6 +17,16 @@
 
 		        <executions>
 		        	<execution>
+			            <id>install node and npm</id>
+			            <goals>
+			            	<goal>install-node-and-npm</goal>
+			            </goals>
+			            <configuration>
+			              <nodeVersion>v6.10.2</nodeVersion>
+			            </configuration>
+          			</execution>
+		        	
+		        	<execution>
 		        		<id>npm install</id>
 		        		<goals>
 		        			<goal>npm</goal>
@@ -25,6 +35,7 @@
 		        			<arguments>install</arguments>
 		        		</configuration>
 		        	</execution>
+				
 				</executions>
 	    	</plugin>
 	    </plugins>
