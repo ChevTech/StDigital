@@ -14,6 +14,9 @@
 		        <groupId>com.github.eirslett</groupId>
 		        <artifactId>frontend-maven-plugin</artifactId>
 		        <version>1.4</version>
+		        <configuration>
+		        	<installDirectory>/home/ec2-user/.nvm/versions/node/v4.4.5/bin</installDirectory>
+		        </configuration>
 		        <executions>	
 		        	<execution>
 		        		<id>npm install</id>
@@ -24,7 +27,6 @@
 		        			<arguments>install</arguments>
 		        		</configuration>
 		        	</execution>
-				
 				</executions>
 	    	</plugin>
 	    </plugins>
