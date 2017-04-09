@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/Python-Student/StDigital/issues"
   },
-  "homepage": "https://github.com/Python-Student/StDigital#readme"
+  "homepage": "https://github.com/Python-Student/StDigital#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
 }
