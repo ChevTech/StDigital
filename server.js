@@ -4,7 +4,7 @@ var express = require('express');
 var app = express();
 
 app.get('/', function (req, res) {
-	res.send(_.capitalize('hello world'))
+	res.send(_.capitalize('Hello world!'))
 })
 
 app.listen(8081);
