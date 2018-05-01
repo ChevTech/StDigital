@@ -7,4 +7,5 @@ resources:
 hooks:
   ApplicationStart: 
     - location: scripts/start-server.sh
+      runas: root
   ApplicationStop:
