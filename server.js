@@ -4,7 +4,7 @@ var express = require('express');
 var app = express();
 
 app.get('/', function (req, res) {
-	res.send(_.capitalize('HelloWorld, aws CI/CD pipeline is configured for continuous deployment'))
+	res.send(_.capitalize('HelloWorld'))
 })
 
 app.listen(8081);
