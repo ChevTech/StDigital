@@ -7,5 +7,5 @@ resources:
 hooks:
   ApplicationStart: 
     - location: scripts/start-server.sh
-      runas: root
+      runas: ec2-user
   ApplicationStop:
