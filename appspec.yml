@@ -5,6 +5,8 @@ files:
     destination: /StDigital
 resources:
 hooks:
+  BeforeInstall:
+    - location: scripts/before-install.sh  
   ApplicationStart: 
     - location: scripts/start-server.sh
       runas: ec2-user
