@@ -6,6 +6,7 @@ const app = express();
 app.use(bodyParser.json());
 
 app.get('/', function (req, res) {
+	console.log("HelloWorld");
 	res.send(_.capitalize('HelloWorld'))
 })
 
