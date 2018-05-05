@@ -85,11 +85,10 @@ function getParameter(parameters, key) {
 }
 
 async function processWebhookEvent(config, webhook_event){
-	const PAGE_ACCESS_TOKEN = config.PAGE_ACCESS_TOKEN.value;
-	const permissions = config.permissions.split(',');
-	const { first_name, last_name } = await fetch(facebook_api.getProfile(webhook_event.sender.id), config.PAGE_ACCESS_TOKEN);
-	console.log(userProfile);
-
+	const PAGE_ACCESS_TOKEN = config.PAGE_ACCESS_TOKEN.Value;
+	const permissions = config.permissions.Value.split(',');
+	const { first_name, last_name } = await fetch(facebook_api.getProfile(webhook_event.sender.id, PAGE_ACCESS_TOKEN)).then(res => res.json());
+	
 	if(permissions.includes(`${first_name} ${last_name}`)){
 		console.log('fetching google image');
 	}
