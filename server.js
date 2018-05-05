@@ -37,11 +37,11 @@ parameters.then(params => {
 	
 	app.post('/webhook', (req, res) => {
 		let body = req.body;
-		
+				
 		if(body.object === 'page') {
 			body.entry.forEach(function(entry) {
 				let webhook_event = entry.messaging[0];
-				processWebhookEvent(webhook_event);
+				processWebhookEvent(req.app.locals, webhook_event);
 			});
 	
 			res.status(200).send('EVENT_RECEIVED');
@@ -84,10 +84,10 @@ function getParameter(parameters, key) {
 	return parameter[0];
 }
 
-async function processWebhookEvent(webhook_event){
-	const PAGE_ACCESS_TOKEN = app.locals.PAGE_ACCESS_TOKEN.value;
-	const permissions = app.locals.permissions.split(',');
-	const { first_name, last_name } = await fetch(facebook_api.getProfile(webhook_event.sender.id), app.locals.PAGE_ACCESS_TOKEN);
+async function processWebhookEvent(config, webhook_event){
+	const PAGE_ACCESS_TOKEN = config.PAGE_ACCESS_TOKEN.value;
+	const permissions = config.permissions.split(',');
+	const { first_name, last_name } = await fetch(facebook_api.getProfile(webhook_event.sender.id), config.PAGE_ACCESS_TOKEN);
 	console.log(userProfile);
 
 	if(permissions.includes(`${first_name} ${last_name}`)){
